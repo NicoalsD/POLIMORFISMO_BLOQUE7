@@ -1,8 +1,7 @@
 import java.util.Scanner;
 
-public class Main{
+public class Main {
     public static void main(String[] args) {
-
         String titulo;
         double precio;
         int anioPublicacion;
@@ -14,7 +13,6 @@ public class Main{
 
         Scanner input = new Scanner(System.in);
 
-        // ---- Libro ----
         System.out.println("Bienvenido a la editorial");
         System.out.println("Vamos a crear un libro");
         System.out.println("Cual es el titulo del libro?");
@@ -29,9 +27,8 @@ public class Main{
         Libro miLibro = new Libro(titulo, precio, anioPublicacion, numeroPaginas);
         System.out.println(miLibro);
 
-        // ---- Disco ----
-        input.nextLine(); // limpiar buffer
-        System.out.println("\nVamos a crear un disco");
+        input.nextLine();
+        System.out.println("Vamos a crear un disco");
         System.out.println("Cual es el titulo del disco?");
         titulo = input.nextLine();
         System.out.println("Cual es el precio del disco?");
@@ -42,9 +39,8 @@ public class Main{
         Disco miDisco = new Disco(titulo, precio, duracionMinutos);
         System.out.println(miDisco);
 
-        // ---- Video ----
-        input.nextLine(); // limpiar buffer
-        System.out.println("\nVamos a crear un video");
+        input.nextLine();
+        System.out.println("Vamos a crear un video");
         System.out.println("Cual es el titulo del video?");
         titulo = input.nextLine();
         System.out.println("Cual es el precio del video?");
@@ -57,26 +53,20 @@ public class Main{
         System.out.println("3. Portugués");
         opcionIdioma = input.nextInt();
 
-        switch (opcionIdioma) {
-            case 1:
-                idioma = Idioma.ESPAÑOL;
-                break;
-            case 2:
-                idioma = Idioma.INGLES;
-                break;
-            case 3:
-                idioma = Idioma.PORTUGUES;
-                break;
-            default:
-                System.out.println("Opcion no valida, se asignara Español por defecto.");
-                idioma = Idioma.ESPAÑOL;
-                break;
+        if (opcionIdioma == 1) {
+            idioma = Idioma.ESPAÑOL;
+        } else if (opcionIdioma == 2) {
+            idioma = Idioma.INGLES;
+        } else if (opcionIdioma == 3) {
+            idioma = Idioma.PORTUGUES;
+        } else {
+            System.out.println("Opcion no valida, se asignara Español por defecto.");
+            idioma = Idioma.ESPAÑOL;
         }
 
         Video miVideo = new Video(titulo, precio, idioma, duracionHoras);
         System.out.println(miVideo);
 
         input.close();
-
     }
 }
