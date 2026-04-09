@@ -6,7 +6,7 @@
 
 ---
 
-## Contexto / Enunciado (Universidad)
+## Contexto
 
 Este repositorio corresponde a un ejercicio académico de **Programación Orientada a Objetos** cuyo objetivo es aplicar **herencia y polimorfismo**.
 
