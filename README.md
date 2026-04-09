@@ -20,6 +20,9 @@ Cada una de las tres clases tendrá una función y otra función **mostrar()**, 
 
 Escribir un programa que cree instancias de las clases **Libro** y **Disco**, solicite datos al usuario y a continuación los visualice.
 
+## Diagrama UML
+<img width="1425" height="591" alt="image" src="https://github.com/user-attachments/assets/501a2bb5-b04d-42fb-937a-283e933942e5" />
+
 ## Actualización
 
 Agregar al modelo la clase **`Video`**, con:
